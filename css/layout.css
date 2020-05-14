@@ -1,0 +1,84 @@
+body{
+    display: grid;
+}
+header{
+    grid-area: h;
+    /*display: none;*/ /* nerodytu,
+    jeigu h h h h nebutu*/
+}
+header > div{
+    float: left;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+header > div:last-child{
+    float: right;
+    justify-content: flex-end;
+}
+
+aside{
+    grid-area: a;
+}
+main{
+    grid-area: m;
+}
+
+footer{
+    grid-area: f;
+}
+section{
+    grid-area: s;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px ) {
+    body{
+        grid-template-areas:
+                'h'
+                'a'
+                'm'
+                's'
+                'f'
+    ;
+    }
+}
+/* Extra small devices (phones, 600px and down) */
+@media  only screen and (min-width: 600px ) {
+    body{
+        grid-template-areas:
+                'h'
+                'a'
+                'm'
+                's'
+                'f'
+    ;
+
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    body{
+        grid-template-areas:
+                'h h h h'
+                'a m m m '
+                's s s s'
+                'f f f f'
+    ;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1200px) {
+    body{
+
+        grid-template-areas:
+                'h h h h h'
+                'a m m m s'
+                'f f f f f'
+    ;
+    }
+}
+
+
